@@ -9,6 +9,6 @@ public class Main {
 		System.out.println(blackjack);
 		System.out.println(hand);
 		//        System.out.println("TEMOIN, Complete deck : " + blackjack);
-		System.out.println("Fin");
+		// System.out.println("Fin");
 	}
 }

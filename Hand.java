@@ -3,12 +3,13 @@ public class Hand {
 		String[] Hand = {"", "","", "","", "","", "","", "","", ""};
 		Hand[0] = deck[0];
 		System.out.println(Hand);
-		return (Hand).;
+		return Hand;
 	}
 
 	public String toString() {
-		String[] hand = Hand();
+		// String[] hand = Hand();
 		//System.out.println("Hello2");
-		return (hand).toString();
+		// return hand.toString();
+		return "Hello";
 	}
 }

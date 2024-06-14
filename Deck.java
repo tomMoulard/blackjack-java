@@ -16,12 +16,12 @@ public class Deck {
 
 		Collections.shuffle(Arrays.asList(deck));
 		//System.out.println(deck.getClass());
-		System.out.println("TEMOIN, Complete deck : " + Arrays.toString(deck));
+		// System.out.println("TEMOIN, Complete deck : " + Arrays.toString(deck));
 		//System.out.println(deck.getClass());
 		//        for (int i = 0; i< deck.length; i++) {
 		//            System.out.println(deck[i]);
 		//}
-		return (deck);
+		return deck;
 	}
 
 	public String toString() {
