@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 
 public class Deck {
+	String[] deck = deck();
+
 	public String[] deck() {
 		String[] deck = {
 			"Spade_King", "Spade_Queen", "Spade_Jack", "Spade_10", "Spade_9", "Spade_8", "Spade_7", "Spade_6", "Spade_5", "Spade_4", "Spade_3", "Spade_2", "Spade_Ace",
@@ -25,9 +27,7 @@ public class Deck {
 	}
 
 	public String toString() {
-		String[] deck = deck();
-		//System.out.println("Hello2");
-		return (deck).toString();
+		return Arrays.toString(deck);
 	}
 	//    public String[] Hand (String[] deck){
 	//        String[] Hand = {"", "","", "","", "","", "","", "","", ""};
