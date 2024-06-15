@@ -1,11 +1,10 @@
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
-import java.util.ArrayList;
 
 
 public class Deck {
 	String[] deck = deck();
+	int pos = 0;
 
 	public String[] deck() {
 		String[] deck = {
@@ -14,7 +13,12 @@ public class Deck {
 			"Heart_King", "Heart_Queen", "Heart_Jack", "Heart_10", "Heart_9", "Heart_8", "Heart_7", "Heart_6", "Heart_5", "Heart_4", "Heart_3", "Heart_2", "Heart_Ace",
 			"Diamond_King", "Diamond_Queen", "Diamond_Jack", "Diamond_10", "Diamond_9", "Diamond_8", "Diamond_7", "Diamond_6", "Diamond_5", "Diamond_4", "Diamond_3", "Diamond_2", "Diamond_Ace"
 		};
-		//System.out.println(deck.getClass());
+
+		// add 8 deck to decks
+		String[] decks = new String[416];
+		for (int i = 0; i < 8; i++) {
+			System.arraycopy(deck, 0, decks, i * 52, 52);
+		}
 
 		Collections.shuffle(Arrays.asList(deck));
 		//System.out.println(deck.getClass());
@@ -23,12 +27,23 @@ public class Deck {
 		//        for (int i = 0; i< deck.length; i++) {
 		//            System.out.println(deck[i]);
 		//}
-		return deck;
+		return decks;
 	}
 
 	public String toString() {
 		return Arrays.toString(deck);
 	}
+
+	public Hand NewHand() {
+		Hand hand = new Hand();
+		for (int i = 0; i < 10; i++) {
+			hand.hand[i] = deck[pos++];
+		}
+
+		//System.out.println(hand);
+		return hand;
+	}
+
 	//    public String[] Hand (String[] deck){
 	//        String[] Hand = {"", "","", "","", "","", "","", "","", ""};
 	//        Hand[0] = deck[0];
